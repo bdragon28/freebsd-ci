@@ -2,7 +2,7 @@
     name: FreeBSD-src
     scm:
       - git:
-          url: https://git.freebsd.org/src.git
+          url: git://blackdragon.freebsd-cluster.rtk0.net/blackdragon/freebsd-git/src.git
           branches:
             - 'origin/{branch}'
           basedir: src
@@ -42,7 +42,7 @@
     name: FreeBSD-doc
     scm:
       - git:
-          url: https://git.freebsd.org/doc.git
+          url: git://blackdragon.freebsd-cluster.rtk0.net/blackdragon/freebsd-git/doc.git
           branches:
             - 'origin/{branch}'
           basedir: doc
