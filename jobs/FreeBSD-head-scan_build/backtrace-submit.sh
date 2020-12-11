@@ -2,6 +2,10 @@
 #
 # Usage: ./submit.sh <input directory> <output directory> <URL>
 
+echo "local -- quitting early"
+exit 0
+
+
 INPUT="$1"
 BUILD="$2"
 URL="$3"
