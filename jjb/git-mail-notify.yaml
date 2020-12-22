@@ -1,11 +1,12 @@
 - publisher:
     name: git-mail-notify-failure
     publishers:
-      - git-mail-notify-failure-custom:
-          freebsd_mail_disable: false
-          freebsd_send_to:
-            - developers
-            - recipients
+      - chuck-norris
+#      - git-mail-notify-failure-custom:
+#          freebsd_mail_disable: false
+#          freebsd_send_to:
+#            - developers
+#            - recipients
 - publisher:
     name: git-mail-notify-failure-custom
     publishers:
@@ -43,11 +44,12 @@
 - publisher:
     name: git-mail-notify-unstable
     publishers:
-      - git-mail-notify-unstable-custom:
-          freebsd_mail_disable: false
-          send-to:
-            - developers
-            - recipients
+      - chuck-norris
+#      - git-mail-notify-unstable-custom:
+#          freebsd_mail_disable: false
+#          send-to:
+#            - developers
+#            - recipients
 - publisher:
     name: git-mail-notify-unstable-custom
     publishers:
@@ -85,11 +87,13 @@
 - publisher:
     name: git-mail-notify-fixed
     publishers:
-      - git-mail-notify-fixed-custom:
-          freebsd_mail_disable: false
-          freebsd_send_to:
-            #- culprits
-            - recipients
+      - chuck-norris
+#      - git-mail-notify-fixed-custom:
+#          freebsd_mail_disable: false
+#          freebsd_send_to:
+#            #- culprits
+#            - recipients
+
 - publisher:
     name: git-mail-notify-fixed-custom
     publishers:
