@@ -19,6 +19,8 @@ echo "OSRELEASE=${OSRELEASE}"
 echo "BUILDER_JAIL_IP6=${BUILDER_JAIL_IP6}"
 echo "BUILDER_JAIL_IP4=${BUILDER_JAIL_IP4}"
 
+set
+
 RELEASE_TYPE=`echo ${OSRELEASE} | cut -f 2 -d '-' | tr -d [:digit:]`
 case ${RELEASE_TYPE} in
 "RELEASE"|"BETA"|"RC")
@@ -37,9 +39,9 @@ case ${RELEASE_TYPE} in
 	;;
 esac
 
-fetch -m ${BASE_URL}/base.txz
+env HTTP_PROXY='' fetch -v -m ${BASE_URL}/base.txz
 if [ "${WITH_32BIT}" -eq 1 ]; then
-	fetch -m ${BASE_URL}/lib32.txz
+	env HTTP_PROXY='' fetch -m ${BASE_URL}/lib32.txz
 fi
 
 sudo zfs create ${ZFS_PARENT}/${JNAME}
